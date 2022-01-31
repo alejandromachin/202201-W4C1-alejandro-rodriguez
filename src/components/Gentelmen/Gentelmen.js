@@ -1,7 +1,16 @@
 import "../../styles/styles.css";
+import { useState } from "react";
+
 const Gentelmen = ({ gentelman }) => {
   const { name, status, profession, twitter, picture, alternativeText } =
     gentelman;
+
+  const [selected, setSelected] = useState("selected");
+
+  const actionOnClick = () => {
+    setSelected(!selected);
+  };
+
   const getInitial = () => {
     const nameParts = name.split(" ");
     if (nameParts[0].length <= 3) {
@@ -11,7 +20,10 @@ const Gentelmen = ({ gentelman }) => {
   };
   return (
     <>
-      <li className="gentleman">
+      <li
+        className={`gentleman ${selected ? "selected" : ""}`}
+        onClick={actionOnClick}
+      >
         <div className="gentleman__avatar-container">
           <img
             className="gentleman__avatar"
