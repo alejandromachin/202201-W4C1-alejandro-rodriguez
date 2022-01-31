@@ -2,13 +2,21 @@ import "../../styles/styles.css";
 import { useState } from "react";
 
 const Gentelmen = ({ gentelman }) => {
-  const { name, status, profession, twitter, picture, alternativeText } =
-    gentelman;
+  const {
+    name,
+    status,
+    profession,
+    twitter,
+    picture,
+    alternativeText,
+    selected,
+  } = gentelman;
 
-  const [selected, setSelected] = useState("selected");
+  const [checked, setChecked] = useState(selected);
 
   const actionOnClick = () => {
-    setSelected(!selected);
+    setChecked(!selected);
+    setChecked(!checked);
   };
 
   const getInitial = () => {
@@ -21,7 +29,7 @@ const Gentelmen = ({ gentelman }) => {
   return (
     <>
       <li
-        className={`gentleman ${selected ? "selected" : ""}`}
+        className={`gentleman ${checked ? "selected" : ""}`}
         onClick={actionOnClick}
       >
         <div className="gentleman__avatar-container">
