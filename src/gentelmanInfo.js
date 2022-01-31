@@ -29,5 +29,15 @@ const gentelmen = [
     alternativeText: "Churchs pointing at you",
     selected: true,
   },
+  {
+    id: 4,
+    name: "Marius Gounsales",
+    status: "Alive",
+    profession: "Tester",
+    twitter: "@Jest_or_dead",
+    picture: "mario.jpg",
+    alternativeText: "Marius pointing at you",
+    selected: true,
+  },
 ];
 export default gentelmen;

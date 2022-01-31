@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Info />
-      <ul>{listOfArrays}</ul>
+      <ul className="gentlemen">{listOfArrays}</ul>
     </div>
   );
 }
