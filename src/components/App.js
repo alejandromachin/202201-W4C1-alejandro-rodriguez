@@ -12,8 +12,15 @@ function App() {
 
   return (
     <div className="App">
-      <Info />
-      <ul className="gentlemen">{listOfArrays}</ul>
+      <div className="container">
+        <header className="main-header">
+          <h1 className="main-title">The pointing gentlemen</h1>
+        </header>
+        <Info />
+        <main className="main">
+          <ul className="gentlemen">{listOfArrays}</ul>
+        </main>
+      </div>
     </div>
   );
 }
