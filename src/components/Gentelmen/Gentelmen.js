@@ -1,5 +1,15 @@
 import "../../styles/styles.css";
-const Gentelmen = () => {
+const Gentelmen = ({ gentelman }) => {
+  const {
+    id,
+    name,
+    status,
+    profession,
+    twitter,
+    picture,
+    alternativeText,
+    selected,
+  } = gentelman;
   return (
     <>
       <li className="gentleman">

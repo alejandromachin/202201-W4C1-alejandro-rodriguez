@@ -10,13 +10,13 @@ const gentelmen = [
     selected: true,
   },
   {
+    id: 2,
     name: "The Farytale",
     status: "RIP",
     profession: "Influencer",
     twitter: "pending",
     picture: "fary.jpg",
     alternativeText: "The Fary pointing at you",
-    id: 2,
     selected: false,
   },
   {
