@@ -6,7 +6,7 @@ const Gentelmen = () => {
         <div className="gentleman__avatar-container">
           <img
             className="gentleman__avatar"
-            src="img/fary.jpg"
+            src="/images/fary.jpg"
             alt="The Fary pointing at you"
           />
           <span className="gentleman__initial">F</span>
