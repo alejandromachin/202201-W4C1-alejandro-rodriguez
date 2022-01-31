@@ -4,10 +4,16 @@ import Info from "./Info/Info";
 import gentelmen from "../gentelmanInfo";
 
 function App() {
+  const gentelmenArray = gentelmen;
+
+  const listOfArrays = gentelmenArray.map((gentelman) => {
+    return <Gentelmen gentelman={gentelman} key={gentelman.id} />;
+  });
+
   return (
     <div className="App">
       <Info />
-      <Gentelmen gentelman={gentelmen[0]} />
+      <ul>{listOfArrays}</ul>
     </div>
   );
 }
