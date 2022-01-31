@@ -2,7 +2,13 @@ import "../../styles/styles.css";
 const Gentelmen = ({ gentelman }) => {
   const { name, status, profession, twitter, picture, alternativeText } =
     gentelman;
-
+  const getInitial = () => {
+    const nameParts = name.split(" ");
+    if (nameParts[0].length <= 3) {
+      return nameParts[1].charAt(0).toUpperCase();
+    }
+    return nameParts[0].charAt(0).toUpperCase();
+  };
   return (
     <>
       <li className="gentleman">
@@ -12,7 +18,7 @@ const Gentelmen = ({ gentelman }) => {
             src={`images/${picture}`}
             alt={alternativeText}
           />
-          <span className="gentleman__initial">F</span>
+          <span className="gentleman__initial">{getInitial()}</span>
         </div>
         <div className="gentleman__data-container">
           <h2 className="gentleman__name">{name}</h2>
