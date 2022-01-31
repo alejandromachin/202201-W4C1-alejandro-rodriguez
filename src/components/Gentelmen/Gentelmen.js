@@ -1,15 +1,8 @@
 import "../../styles/styles.css";
 const Gentelmen = ({ gentelman }) => {
-  const {
-    id,
-    name,
-    status,
-    profession,
-    twitter,
-    picture,
-    alternativeText,
-    selected,
-  } = gentelman;
+  const { name, status, profession, twitter, picture, alternativeText } =
+    gentelman;
+
   return (
     <>
       <li className="gentleman">
